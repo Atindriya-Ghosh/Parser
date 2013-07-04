@@ -1,15 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>parser</groupId>
-  <artifactId>org.parser</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-  <properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>parser</groupId>
+	<artifactId>org.parser</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<properties>
 		<!-- ENVIRONMENT -->
 		<compile.source>1.6</compile.source>
 		<char.encoding>UTF-8</char.encoding>
 		<file.encoding>UTF-8</file.encoding>
-		
+
 		<!-- MAVEN PLUGINS -->
 		<maven-compiler-plugin-version>2.3.2</maven-compiler-plugin-version>
 		<maven-surefire-plugin-version>2.9</maven-surefire-plugin-version>
@@ -25,6 +26,7 @@
 		<!-- LIBRARIES -->
 		<cglib.version>2.2.2</cglib.version>
 		<commons-io.version>2.4</commons-io.version>
+		<commons-jxpath.version>2.4</commons-jxpath.version>
 		<junit.version>4.11</junit.version>
 		<org.slf4j.api.version>1.6.4</org.slf4j.api.version>
 		<org.slf4j.log4j.version>1.6.6</org.slf4j.log4j.version>
@@ -173,9 +175,9 @@
 	</build>
 	<dependencyManagement>
 		<dependencies>
-			
+
 			<!-- PROVIDED -->
-			
+
 			<!-- TEST -->
 			<dependency>
 				<groupId>org.springframework</groupId>
@@ -201,9 +203,13 @@
 				<version>${powermock.api.mockito.version}</version>
 				<scope>test</scope>
 			</dependency>
-			
+
 			<!-- RUNTIME -->
-			
+			<dependency>
+				<groupId>commons-jxpath</groupId>
+				<artifactId>commons-jxpath</artifactId>
+				<version>${commons-jxpath.version}</version>
+			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-beans</artifactId>
